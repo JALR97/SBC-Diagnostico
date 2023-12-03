@@ -50,6 +50,6 @@ public class Buffon : MonoBehaviour
             }
         }
 
-        final.text = $"Con n:{touchCount} agujas tocando una linea, de N:{needleNum} agujas lanzadas. El calculo de pi a partir de estos N/n es igual a: {needleNum/touchCount}";
+        final.text = $"Con n:{touchCount} agujas tocando una linea, de N:{needleNum} agujas lanzadas. El calculo de pi a partir de estos N/n es igual a: {(float)needleNum/touchCount}";
     }
 }
