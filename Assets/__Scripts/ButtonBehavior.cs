@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ButtonBehavior : MonoBehaviour
 {
-    [SerializeField] private GameObject Window;
+    [SerializeField] private GameObject WindowTarget;
+    [SerializeField] private GameObject Window_Self;
     public void Salir()
     {
         Application.Quit();
@@ -12,12 +13,16 @@ public class ButtonBehavior : MonoBehaviour
 
     public void atras()
     {
-        Window.SetActive(false);
+        Window_Self.SetActive(false);
     }
     
     public void MostrarVentana()
     {
-        Window.SetActive(true);
-        
+        WindowTarget.SetActive(true);
+    }
+    public void NextVentana()
+    {
+        WindowTarget.SetActive(true);
+        Window_Self.SetActive(false);
     }
 }
