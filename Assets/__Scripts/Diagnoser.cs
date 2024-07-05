@@ -76,8 +76,9 @@ public class Diagnoser : MonoBehaviour
                 }
             }
             if (maxPercent >= 50) {
+                Debug.Log($"idEnfermedad {idEnfermedad}");
                 text1.text =
-                    $"Segun los sintomas seleccionados, se obtuvo un {maxPercent}% de similitud de sintomas para la condicion: \"{_dbCondiciones.baseDeCondicions[idEnfermedad - 1].nombre}\". Con {finalQty} sintomas de la enfermedad presentes en el paciente";
+                    $"Segun los síntomas seleccionados, se obtuvo un {maxPercent}% de similitud de sintomas para la condicion: \"{_dbCondiciones.baseDeCondicions[idEnfermedad - 1].nombre}\". Con {finalQty} síntomas de la enfermedad presentes en el paciente";
                 text2.text = _dbCondiciones.baseDeCondicions[idEnfermedad - 1].recomendacion;
             }
             else {

@@ -49,7 +49,7 @@ public class Condicion {
             }
         }
         
-        percent = 100 * (float)number / (sintomas2.Count + (sintomas1.Count - number));
+        percent = 100 * (float)number / (sintomas2.Count + (sintomas1.Count - number)/2);
     }
     public void AddSintoma(Sintoma sint) {
         int catId = (sint.id - sint.id % 1000) / 10000;

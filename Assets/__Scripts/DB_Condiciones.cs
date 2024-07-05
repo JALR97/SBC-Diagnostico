@@ -22,10 +22,86 @@ public class DB_Condiciones : MonoBehaviour {
         cond.AddSintoma(sint);
         sint.id = 10102; 
         cond.AddSintoma(sint);
-        
+        cond.recomendacion = "Para aliviar los síntomas del resfriado común, puedes usar descongestionantes como pseudoefedrina para la congestión nasal, y medicamentos como el paracetamol o el ibuprofeno para el dolor de cabeza y la fiebre. También puedes usar pastillas para la garganta para aliviar el dolor de garganta y antitusivos para reducir la tos.";
         baseDeCondicions.Add(cond);
         
-        cond = new Condicion(2, "Gastroenteritis");
+        cond = new Condicion(2, "Influenza");
+        sint.id = 10101; 
+        cond.AddSintoma(sint);
+        sint.id = 40101; 
+        cond.AddSintoma(sint);
+        sint.id = 60101; 
+        cond.AddSintoma(sint);
+        sint.id = 10102; 
+        cond.AddSintoma(sint);
+        sint.id = 10109; 
+        cond.AddSintoma(sint);
+        sint.id = 20105; 
+        cond.AddSintoma(sint);
+        sint.id = 20104; 
+        cond.AddSintoma(sint);
+        sint.id = 20108; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la influenza, puedes usar analgésicos y antipiréticos como el paracetamol o el ibuprofeno para aliviar la fiebre y el dolor. Los descongestionantes y los antitusivos pueden ayudar con los síntomas respiratorios. Los medicamentos antivirales generalmente requieren receta médica, por lo que es mejor consultar a un médico para su uso.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(3, "Alergias");
+        sint.id = 20101; 
+        cond.AddSintoma(sint);
+        sint.id = 20102; 
+        cond.AddSintoma(sint);
+        sint.id = 20103; 
+        cond.AddSintoma(sint);
+        sint.id = 70102; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Los antihistamínicos como la cetirizina o la loratadina son efectivos para reducir los síntomas de las alergias estacionales. Para la congestión nasal, los descongestionantes como la pseudoefedrina pueden ser útiles. Los aerosoles nasales con corticosteroides también pueden proporcionar alivio.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(4, "Infección de oído");
+        sint.id = 10113; 
+        cond.AddSintoma(sint);
+        sint.id = 10110; 
+        cond.AddSintoma(sint);
+        sint.id = 10101; 
+        cond.AddSintoma(sint);
+        sint.id = 40110; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para el alivio del dolor de oído, se pueden utilizar analgésicos como el paracetamol o el ibuprofeno. En algunos casos, se pueden necesitar gotas óticas antibióticas si hay una infección bacteriana confirmada. Consulta a un médico para un diagnóstico adecuado.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(5, "Faringitis");
+        sint.id = 20104; 
+        cond.AddSintoma(sint);
+        sint.id = 10101; 
+        cond.AddSintoma(sint);
+        sint.id = 40101; 
+        cond.AddSintoma(sint);
+        sint.id = 10109; 
+        cond.AddSintoma(sint);
+        sint.id = 80102; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la faringitis, los analgésicos como el paracetamol o el ibuprofeno pueden ayudar a aliviar el dolor de garganta y reducir la fiebre. Las pastillas para la garganta y los gargarismos con agua salada pueden proporcionar alivio. Los antibióticos para infecciones bacterianas requieren receta médica.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(6, "Sinusitis");
+        sint.id = 20106; 
+        cond.AddSintoma(sint);
+        sint.id = 20107; 
+        cond.AddSintoma(sint);
+        sint.id = 20102; 
+        cond.AddSintoma(sint);
+        sint.id = 20109; 
+        cond.AddSintoma(sint);
+        sint.id = 40101; 
+        cond.AddSintoma(sint);
+        sint.id = 20105; 
+        cond.AddSintoma(sint);
+        sint.id = 10102; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la sinusitis, los descongestionantes nasales y los antihistamínicos pueden aliviar la congestión y la presión sinusal. Los analgésicos como el paracetamol o el ibuprofeno pueden ayudar con el dolor y la fiebre. Los antibióticos para infecciones bacterianas requieren receta médica.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(7, "Gastroenteritis");
         sint.id = 30101; 
         cond.AddSintoma(sint);
         sint.id = 30102; 
@@ -38,10 +114,100 @@ public class DB_Condiciones : MonoBehaviour {
         cond.AddSintoma(sint);
         sint.id = 10102; 
         cond.AddSintoma(sint);
-        
+        cond.recomendacion = "Para la gastroenteritis, es importante mantenerse hidratado. Las soluciones de rehidratación oral son efectivas para prevenir la deshidratación. Para el alivio sintomático, los antidiarreicos como la loperamida y los antieméticos como la meclizina pueden ser útiles.";
         baseDeCondicions.Add(cond);
         
-        cond = new Condicion(3, "Anemia ferropénica");
+        cond = new Condicion(8, "Reflujo Gastroesofágico");
+        sint.id = 30106; 
+        cond.AddSintoma(sint);
+        sint.id = 30107; 
+        cond.AddSintoma(sint);
+        sint.id = 30104; 
+        cond.AddSintoma(sint);
+        sint.id = 30108; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para el reflujo gastroesofágico, los antiácidos como el hidróxido de magnesio o el bicarbonato de sodio pueden proporcionar alivio rápido. Los inhibidores de la bomba de protones (IBP) como el omeprazol y los antagonistas de los receptores H2 como la ranitidina pueden ayudar a reducir la producción de ácido estomacal.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(9, "Dispepsia (indigestión)");
+        sint.id = 30104; 
+        cond.AddSintoma(sint);
+        sint.id = 30109; 
+        cond.AddSintoma(sint);
+        sint.id = 30108; 
+        cond.AddSintoma(sint);
+        sint.id = 30101; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la dispepsia, los antiácidos y los inhibidores de la bomba de protones (IBP) como el omeprazol pueden aliviar la acidez estomacal y la indigestión. Los procinéticos como la metoclopramida pueden ayudar con la motilidad gástrica.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(10, "Pie de Atleta");
+        sint.id = 70101; 
+        cond.AddSintoma(sint);
+        sint.id = 70102; 
+        cond.AddSintoma(sint);
+        sint.id = 70103; 
+        cond.AddSintoma(sint);
+        sint.id = 70104; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para el pie de atleta, los antifúngicos tópicos como el clotrimazol o el terbinafina son efectivos. Aplica la crema según las indicaciones hasta que los síntomas desaparezcan por completo y continúa por unos días más para prevenir la recurrencia.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(11, "Eczema");
+        sint.id = 70109; 
+        cond.AddSintoma(sint);
+        sint.id = 70102; 
+        cond.AddSintoma(sint);
+        sint.id = 70101; 
+        cond.AddSintoma(sint);
+        sint.id = 70110; 
+        cond.AddSintoma(sint);
+        sint.id = 70111; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para el eczema, los corticosteroides tópicos como la hidrocortisona pueden reducir la inflamación y el picor. Los emolientes y las cremas hidratantes deben usarse regularmente para mantener la piel hidratada y prevenir brotes.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(12, "Psoriasis");
+        sint.id = 70106; 
+        cond.AddSintoma(sint);
+        sint.id = 70110; 
+        cond.AddSintoma(sint);
+        sint.id = 70102; 
+        cond.AddSintoma(sint);
+        sint.id = 70112; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la psoriasis, los corticosteroides tópicos como la betametasona pueden ayudar a reducir la inflamación y las placas. Los análogos de la vitamina D y los retinoides tópicos también pueden ser útiles. Consulta a un dermatólogo para opciones de tratamiento más avanzadas si es necesario.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(13, "Acné");
+        sint.id = 70112; 
+        cond.AddSintoma(sint);
+        sint.id = 70101; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para el acné, los tratamientos tópicos con peróxido de benzoilo, ácido salicílico o retinoides pueden ser efectivos. En casos más severos, los antibióticos tópicos o sistémicos y los retinoides orales como la isotretinoína pueden ser necesarios. Consulta a un dermatólogo para un tratamiento adecuado.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(14, "Urticaria");
+        sint.id = 70101; 
+        cond.AddSintoma(sint);
+        sint.id = 70102; 
+        cond.AddSintoma(sint);
+        sint.id = 70107; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la urticaria, los antihistamínicos como la cetirizina o la loratadina pueden reducir el picor y las ronchas. En casos más severos, los corticosteroides orales pueden ser necesarios. Consulta a un médico si los síntomas persisten o son graves.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(15, "Dermatitis de contacto");
+        sint.id = 70108; 
+        cond.AddSintoma(sint);
+        sint.id = 70102; 
+        cond.AddSintoma(sint);
+        sint.id = 70101; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la dermatitis de contacto, evita la exposición al irritante o alérgeno. Los corticosteroides tópicos como la hidrocortisona pueden reducir la inflamación y el picor. Los antihistamínicos orales también pueden ayudar con el picor.";
+        baseDeCondicions.Add(cond);
+        
+        cond = new Condicion(16, "Anemia ferropénica");
         sint.id = 10103; 
         cond.AddSintoma(sint);
         sint.id = 10104; 
@@ -54,7 +220,21 @@ public class DB_Condiciones : MonoBehaviour {
         cond.AddSintoma(sint);
         sint.id = 70112; 
         cond.AddSintoma(sint);
+        cond.recomendacion = "Para la anemia ferropénica, los suplementos de hierro como el sulfato ferroso pueden ayudar a aumentar los niveles de hierro. Es importante tomar los suplementos según las indicaciones y complementar con una dieta rica en hierro.";
+        baseDeCondicions.Add(cond);
         
+        cond = new Condicion(17, "Hipertensión arterial");
+        sint.id = 40101; 
+        cond.AddSintoma(sint);
+        sint.id = 10105; 
+        cond.AddSintoma(sint);
+        sint.id = 20110; 
+        cond.AddSintoma(sint);
+        sint.id = 50101; 
+        cond.AddSintoma(sint);
+        sint.id = 10102; 
+        cond.AddSintoma(sint);
+        cond.recomendacion = "Para la hipertensión arterial, los medicamentos antihipertensivos como los inhibidores de la ECA (por ejemplo, enalapril), los bloqueadores de los receptores de angiotensina (por ejemplo, losartán), los betabloqueantes y los diuréticos pueden ser necesarios. Consulta a un médico para un tratamiento personalizado y adecuado.";
         baseDeCondicions.Add(cond);
     }
 
