@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BtnSintoma : MonoBehaviour {
     
-    public string SintomaID;
+    public int SintomaID;
     public bool selected = false;
     [SerializeField] private Sprite normal, highlight;
     [SerializeField] private Image _image;

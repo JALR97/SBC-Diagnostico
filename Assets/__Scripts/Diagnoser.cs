@@ -15,41 +15,59 @@ public class Diagnoser : MonoBehaviour
     [SerializeField] private List<BtnSintoma> Cat6Btns = new List<BtnSintoma>();
     [SerializeField] private List<BtnSintoma> Cat7Btns = new List<BtnSintoma>();
     [SerializeField] private List<BtnSintoma> Cat8Btns = new List<BtnSintoma>();
-    
-    public void Clear(int cat) {
-        List<BtnSintoma> Listatemp = null;
-        switch (cat) {
+
+    List<BtnSintoma> IndextoList(int id) {
+        List<BtnSintoma> lista = null;
+        switch (id) {
             case 1:
-                Listatemp = Cat1Btns;
+                lista = Cat1Btns;
                 break;
             case 2:
-                Listatemp = Cat2Btns;
+                lista = Cat2Btns;
                 break;
             case 3:
-                Listatemp = Cat3Btns;
+                lista = Cat3Btns;
                 break;
             case 4:
-                Listatemp = Cat4Btns;
+                lista = Cat4Btns;
                 break;
             case 5:
-                Listatemp = Cat5Btns;
+                lista = Cat5Btns;
                 break;
             case 6:
-                Listatemp = Cat6Btns;
+                lista = Cat6Btns;
                 break;
             case 7:
-                Listatemp = Cat7Btns;
+                lista = Cat7Btns;
                 break;
             case 8:
-                Listatemp = Cat8Btns;
+                lista = Cat8Btns;
                 break;
         }
-        foreach (var btn in Listatemp) {
+        return lista;
+    }
+    public void Clear(int cat) {
+        List<BtnSintoma> lista = IndextoList(cat);
+        foreach (var btn in lista) {
             btn.clear();
         }
+        paciente.deleteCat(cat);
     }
 
+    public void ClearAll() {
+        for (int i = 1; i <= 8; i++) {
+            Clear(i);
+        }
+    }
     public void SavCat(int cat) {
-        //mark that the category has sintomas marcados
+        List<Sintoma> listaSintomas = new List<Sintoma>();
+        foreach (var btn in IndextoList(cat)) {
+            if (btn.selected) {
+                Sintoma sint = new Sintoma();
+                sint.id = btn.SintomaID;
+                listaSintomas.Add(sint);
+            }
+        }
+        paciente.AddCategoria(new Categoria(cat, listaSintomas));
     }
 }

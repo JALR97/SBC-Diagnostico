@@ -1,5 +1,9 @@
 
 using System.Collections.Generic;
+using System.Text;
+using TMPro;
+using UnityEditor;
+using UnityEngine;
 
 public class Condicion {
     private string nombre;
@@ -10,17 +14,17 @@ public class Condicion {
         id = _id;
         nombre = _nombre;
     }
-    void AddCategoria(Categoria cat) {
+    public void AddCategoria(Categoria cat) {
         if (!isCatAdded(cat.id)) {
             nodos.Add(cat);
         }
         else {
-            deleteCat(id);
+            deleteCat(cat.id);
             nodos.Add(cat);
         }
     }
     
-    void deleteCat(int id){
+    public void deleteCat(int id){
         foreach (var cat in nodos) {
             if (cat.id == id) {
                 nodos.Remove(cat);
@@ -38,16 +42,26 @@ public class Condicion {
         return false;
     }
     //compararSintomas()
-    //ListarSintomas()
+    public string ListarSintomas() {
+        StringBuilder str = new StringBuilder("");
+        str.Clear();
+        foreach (var cat in nodos) {
+            foreach (var idSint in cat.ListarSintomas()) {
+                str.Append(" ");
+                str.Append(idSint);
+            }
+        }
+
+        return str.ToString();
+    }
 }
 
-class Categoria {
+public class Categoria {
     private string nombre;
     public int id;
     private List<Sintoma> sintomas;
 
-    public Categoria(string _nombre, int _id, List<Sintoma> sint) {
-        nombre = _nombre;
+    public Categoria(int _id, List<Sintoma> sint) {
         id = _id;
         sintomas = new List<Sintoma>(sint);
     }
@@ -56,7 +70,7 @@ class Categoria {
         sintomas = new List<Sintoma>(sint);
     }
 
-    List<int> ListarSintomas() {
+    public List<int> ListarSintomas() {
         List<int> lista = new List<int>();
         foreach (var sint in sintomas) {
             lista.Add(sint.id);
@@ -66,7 +80,7 @@ class Categoria {
     }
 }
 
-struct Sintoma {
+public struct Sintoma {
     private string nombre;
     public int id;
 }
